@@ -4,7 +4,7 @@
     height: 100vh;
     background-size: cover;
     background-position: center center;
-    @include mobile() {
+    @include pad() {
         background-image: url(../images/home-header-sm.png);
     }
     .banner-content {
@@ -18,22 +18,29 @@
             font-size: 36px;
             color: $text-color;
         }
+        @include mobile() {
+            font-size: 16px;
+        }
         p {
             font-size: 64px;
             color: $text-color;
             font-weight: 700;
             margin-bottom: $spacer * 0.5;
         }
-        .btn {
-            background: $primary;
+        @include mobile() {
+            font-size: 24px;
+            margin-bottom: $spacer;
+        }
+        a {
+            background-color: $primary;
+            display: block;
+            width: 104px;
+            height: 40px;
             color: #fff;
             font-size: 20px;
-            width: 104px;
-            height: 41px;
-            border: none;
-            cursor: pointer;
+            padding: 6px 12px;
         }
-        .btn:hover {
+        a:hover {
             color: #000;
         }
     }
