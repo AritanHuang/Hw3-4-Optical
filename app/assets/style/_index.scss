@@ -50,7 +50,12 @@
 .service {
     background: $secondary;
     .container {
-        padding: $spacer * 10 0;
+        padding-top: $spacer * 10;
+        padding-bottom: $spacer * 10;
+        @include mobile() {
+            padding-top: $spacer * 5;
+            padding-bottom: $spacer * 5;
+        }
     }
     h2 {
         text-align: center;
@@ -58,19 +63,26 @@
         color: $text-color;
         font-weight: 700;
         margin-bottom: $spacer * 3;
+        @include mobile() {
+            font-size: 24px;
+        }
     }
     .service-item {
         display: flex;
         justify-content: space-between;
-        flex-wrap: wrap;
-        margin: 0 -12px;
+        gap: 24px;
+        @include pad() {
+            flex-wrap: wrap;
+        }
         li {
             width: 25%;
             margin: 0 auto;
-            padding: 0 12px;
             text-align: center;
             @include pad() {
-                width: 48%;
+                width: calc(50% - 12px);
+            }
+            @include mobile() {
+                width: 100%;
             }
             p {
                 text-align: left;
