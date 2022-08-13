@@ -501,15 +501,22 @@ a {
     .service .service-item li {
       width: 25%;
       margin: 0 auto;
-      text-align: center; }
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
       @media (max-width: 992px) {
         .service .service-item li {
           width: calc(50% - 12px); } }
       @media (max-width: 767px) {
         .service .service-item li {
           width: 100%; } }
-      .service .service-item li p {
-        text-align: left; }
     .service .service-item h4 {
       color: #650300;
       font-size: 24px;
