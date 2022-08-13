@@ -423,7 +423,7 @@ a {
   height: 100vh;
   background-size: cover;
   background-position: center center; }
-  @media (max-width: 767px) {
+  @media (max-width: 992px) {
     .banner {
       background-image: url(../images/home-header-sm.png); } }
   .banner .banner-content {
@@ -445,20 +445,27 @@ a {
     .banner .banner-content h2 {
       font-size: 36px;
       color: #650300; }
+    @media (max-width: 767px) {
+      .banner .banner-content {
+        font-size: 16px; } }
     .banner .banner-content p {
       font-size: 64px;
       color: #650300;
       font-weight: 700;
       margin-bottom: 4px; }
-    .banner .banner-content .btn {
-      background: #aa0601;
+    @media (max-width: 767px) {
+      .banner .banner-content {
+        font-size: 24px;
+        margin-bottom: 8px; } }
+    .banner .banner-content a {
+      background-color: #aa0601;
+      display: block;
+      width: 104px;
+      height: 40px;
       color: #fff;
       font-size: 20px;
-      width: 104px;
-      height: 41px;
-      border: none;
-      cursor: pointer; }
-    .banner .banner-content .btn:hover {
+      padding: 6px 12px; }
+    .banner .banner-content a:hover {
       color: #000; }
 
 .faq-content {
